@@ -1,4 +1,4 @@
-<table class="table table-responsive" id="clients-table">
+<table class="table " id="clients-table">
     <thead>
         <tr>
             <th>Icon</th>
@@ -11,15 +11,15 @@
         <tr>
             <td>{!! $clients->icon !!}</td>
             <td>{!! $clients->name !!}</td>
-            <td>
-                {!! Form::open(['route' => ['clients.destroy', $clients->id], 'method' => 'delete']) !!}
-                <div class='btn-group'>
-                    <a href="{!! route('clients.show', [$clients->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                    <a href="{!! route('clients.edit', [$clients->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
-                </div>
-                {!! Form::close() !!}
-            </td>
+            <td class="td-actions text-right"> 
+                    {!! Form::open(['route' => ['clients.destroy', $clients->id], 'method' => 'delete']) !!}
+                      <div class='btn-group'>
+                          <a href="{!! route('clients.show', [$clients->id]) !!}" class='btn btn-info'><i class="material-icons">details</i></a>
+                          <a href="{!! route('clients.edit', [$clients->id]) !!}" class='btn btn-success'><i class="material-icons">edit</i></a>
+                          {!! Form::button('<i class="material-icons">close</i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                      </div>
+                      {!! Form::close() !!}
+                  </td>
         </tr>
     @endforeach
     </tbody>

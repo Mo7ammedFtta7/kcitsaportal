@@ -1,26 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-        <h1 class="pull-left">Advertisers</h1>
-        <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('advertisers.create') !!}">Add New</a>
-        </h1>
-    </section>
-    <div class="content">
-        <div class="clearfix"></div>
 
         @include('flash::message')
 
-        <div class="clearfix"></div>
         <div class="box box-primary">
+
             <div class="box-body">
+                <div class="row">
+                        <div class="col-md-12">
+                                  <div class="card ">
+                                    <div class="card-header card-header-rose card-header-text">
+                                      <div class="card-text">
+                                         <h4 class="card-title">
+                                                Advertisers                                            </h4>
+                                      </div>
+                                    </div>
+                                    <div class="card-body ">
                     @include('advertisers.table')
             </div>
         </div>
-        <div class="text-center">
-        
-        </div>
-    </div>
+        {{-- <div class="card-footer ml-auto mr-auto">
+          <button type="submit" class="btn btn-rose">Validate Inputs<div class="ripple-container"></div></button>
+        </div> --}}
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
 @endsection
 

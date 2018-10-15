@@ -1,4 +1,4 @@
-<table class="table"  id="jobs-table">
+<table class="table datatable"  id="jobs-table">
     <thead >
         <tr>
             <th>Job name</th>
@@ -29,16 +29,6 @@
                     <a href="{!! route('jobs.edit', [$jobs->id]) !!}" class='btn btn-success'><i class="material-icons">edit</i></a>
                     {!! Form::button('<i class="material-icons">close</i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                 </div>
-            
-                    {{-- <button type="button" rel="tooltip" class="btn btn-info" data-original-title="" title="">
-                      <i class="material-icons">details</i>
-                    <div class="ripple-container"></div></button>
-                    <button type="button" rel="tooltip" class="btn btn-success" data-original-title="" title="">
-                      <i class="material-icons">edit</i>
-                    </button>
-                    <button type="button" rel="tooltip" class="btn btn-danger" data-original-title="" title="">
-                      <i class="material-icons">close</i>
-                    </button> --}}
                 {!! Form::close() !!}
             </td>
         </tr>

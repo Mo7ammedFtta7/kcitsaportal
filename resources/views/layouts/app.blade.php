@@ -416,7 +416,7 @@
       //   searchPlaceholder: "Search records",
       // }
       $(document).ready(function() {
-        $('#jobs-table').DataTable({
+        $('.datatable').DataTable({
       "pagingType": "full_numbers",
       "lengthMenu": [
         [10, 25, 50, -1],
